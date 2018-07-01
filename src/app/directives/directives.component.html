@@ -1,0 +1,14 @@
+<h2>Directives</h2>
+<h3>Custom directives</h3>
+<p>O seletor que representa este próprio html, declarado no Decorator deste componente.</p>
+
+<h3>Built-in directives (IF/FOR)</h3>
+<p>Diretivas estruturais, modificam a estrutura ou layout de uma view, adicionando, removendo ou manipulando elementos e seus
+filhos. Elas ajudam a enriquecer o html com condições e loops. O asterísco a frente da diretiva mostra que ela é do tipo
+estrutural. Ex: *ngIf *ngFor
+</p>
+<div *ngIf='mostraDiv'>ESTE BLOCO É RENDERIZADO COM UMA BUILT-IN DIRECTIVE <code>*ngIf='true'</code></div>
+<h4>A lista abaixo é renderizada pela built-in directive <code>*ngFor=''</code> como um loop</h4>
+<ul *ngFor='let ranger of rangers'>
+  <li>{{ranger.name}} / {{ranger.dinosaur}}</li>
+</ul>

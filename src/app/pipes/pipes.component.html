@@ -1,0 +1,41 @@
+<h2 class="display-4">Pipes</h2>
+<p>As vezes os dados não estão formatados, nessa hora que Pipes são úteis, pois eles transformam dados que sofrem <i>binding</i> antes destes serem exibidos, para que estem fiquem mais amigáveis ao usuário.</p>
+<p>Angular fornece alguns Pipes próprios (built-in) para formatar valores, inclusive em <i>property binding</i></p>
+
+O código abaixo mostra a utilização de 2 pipes, currency (formatar em moeda)<br>
+<code>
+{{"{\{20 | currency }\}"}} <br>
+//{{20 | currency}}<br><br>
+</code>
+O código abaixo mostra a utilização do pipe currency, mas enviando os seguites parâmetros:<br>
+<code>
+{{"{\{3.9 | currency:'BRL':true:'1.2.2'}\}"}}
+<br> //{{3.9 | currency:'BRL':true:'1.2-2'}}
+</code>
+<ol>
+  <li>O código da moeda, no caso, 'BRL' (reais do Brasil)</li>
+  <li>Valor booleano para mostrar ou não o símbolo da moeda</li>
+  <li>'1.2-2': 1 representa o mínimo de números inteiros, 2-2 representa o mínimo e máximo de números nas casas decimais</li>
+</ol>
+
+<br>
+
+<h3>Alguns pipes para valores</h3>
+<ul>
+  <li>date</li>
+  <li>number</li>
+  <li>decimal</li>
+  <li>percent</li>
+  <li>currency</li>
+  <li>uppercase</li>
+  <li>lowercase</li>
+</ul>
+
+<h3>Alguns pipes para objetos</h3>
+<dl class="row">
+  <dt class="col-md-9">json</dt> <dd class="col-md-3">- mostra o conteúdo de um objeto como uma string JSON, útil para debugar aplicações</dd>
+  <dt class="col-md-9">slice</dt> <dd class="col-md-3">- seleciona um número específico de itens de uma lista</dd>
+</dl>
+
+<h3>Custom Pipes</h3>
+<p>Também podemos criar nossos próprios Pipes.</p>

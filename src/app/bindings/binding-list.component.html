@@ -1,0 +1,23 @@
+<h2 class="display-4">Bindings</h2>
+<ol>
+  <li>{{expressionInterpolation}} <small>(ver código fonte)</small></li>
+  <li>
+    <figure class="figure">
+      <img width="{{imgW}}" height="{{imgH}}" src="{{imageUrlTemplateExpression}}" alt="Template Expression">
+      <figcaption class="figure-caption">Template Expression <small>(ver código fonte)</small></figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure class="figure">
+      <img [width]='imgW' [height]='imgH' [src]='imageUrlPropertyBinding' alt="Property Binding">
+      <figcaption class="figure-caption">Property Binding <small>(ver código fonte)</small></figcaption>
+    </figure>
+    </li>
+</ol>
+<h2>Event Binding</h2>
+<button (click)='toggleImage()'>clique aqui</button><strong> {{ count > 0 ? count+' cliques' : 'nenhum clique'}} <small>(expression interpolation)</small></strong><br>
+<small>(ver código fonte)</small>
+<h2>Two-way Binding</h2>
+<p>A diretiva <strong>[(ngModel])</strong> faz parte do módulo <i>Forms</i> do próprio Angular. Sendo assim, esse <i>angular module</i> deverá ser importado no módulo da aplicação que contém o componente que o utilizar.</p>
+<input [(ngModel)]='inputText' type="text" label="Escreva algo aqui"> {{inputText}}
+
